@@ -13,7 +13,7 @@ name = "rail-httpx"
 path = "src/main.rs"
 
 [dependencies]
-rail-httpx-core = { path = "../rail-httpx-core" }
+rail-httpx-core = { version = "0.1.1", path = "../rail-httpx-core" }
 tokio = { workspace = true }
 clap = { workspace = true }
 anyhow = { workspace = true }

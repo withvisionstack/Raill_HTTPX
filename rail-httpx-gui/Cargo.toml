@@ -18,7 +18,7 @@ path = "src/main.rs"
 winres = "0.1"
 
 [dependencies]
-rail-httpx-core = { path = "../rail-httpx-core" }
+rail-httpx-core = { version = "0.1.1", path = "../rail-httpx-core" }
 eframe = { workspace = true }
 egui = "0.29"
 egui-phosphor = { workspace = true }
