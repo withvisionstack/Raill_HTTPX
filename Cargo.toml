@@ -7,7 +7,7 @@ version = "0.1.0"
 edition = "2021"
 license = "MIT"
 description = "Postman leve + Burp core, em Rust. Cliente HTTP, proxy MITM, fuzzer, scanner e cliente de banco em um só binário."
-repository = "https://github.com/withvisionstack/rail_httpx"
+repository = "https://github.com/withvisionstack/Raill_HTTPX.git"
 
 [workspace.dependencies]
 tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "io-util", "io-std", "time", "sync"] }
