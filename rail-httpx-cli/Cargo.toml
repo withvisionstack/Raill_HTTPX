@@ -1,0 +1,24 @@
+﻿[package]
+name = "rail-httpx-cli"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "rail-httpx"
+path = "src/main.rs"
+
+[dependencies]
+rail-httpx-core = { path = "../rail-httpx-core" }
+tokio = { workspace = true }
+clap = { workspace = true }
+anyhow = { workspace = true }
+serde_json = { workspace = true }
+colored = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+url = { workspace = true }
+
+[dev-dependencies]
+assert_cmd = "2"
+predicates = "3"
+tempfile = { workspace = true }

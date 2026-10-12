@@ -1,0 +1,27 @@
+[package]
+name = "rail-httpx-gui"
+version.workspace = true
+edition.workspace = true
+
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1"
+
+[[bin]]
+name = "rail-httpx-gui"
+path = "src/main.rs"
+
+[build-dependencies]
+winres = "0.1"
+
+[dependencies]
+rail-httpx-core = { path = "../rail-httpx-core" }
+eframe = { workspace = true }
+egui = "0.29"
+egui-phosphor = { workspace = true }
+tokio = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+toml = { workspace = true }
+url = { workspace = true }
+image = { version = "0.25", default-features = false, features = ["png"] }

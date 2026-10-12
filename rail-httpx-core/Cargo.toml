@@ -1,0 +1,26 @@
+﻿[package]
+name = "rail-httpx-core"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+reqwest = { workspace = true }
+sqlx = { workspace = true }
+thiserror = { workspace = true }
+futures = { workspace = true }
+url = { workspace = true }
+tracing = { workspace = true }
+rcgen = { workspace = true, features = ["pem", "x509-parser"] }
+rustls = { workspace = true }
+tokio-rustls = { workspace = true }
+rustls-pemfile = { workspace = true }
+webpki-roots = { workspace = true }
+
+[dev-dependencies]
+httpmock = { workspace = true }
+tempfile = { workspace = true }
+url = { workspace = true }
+tokio = { workspace = true, features = ["macros", "rt-multi-thread"] }
