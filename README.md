@@ -19,9 +19,9 @@
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="screenshots/send.png" alt="Aba Send — cliente HTTP" width="47%">
+  <img src="screenshots/send.PNG" alt="Aba Send — cliente HTTP" width="47%">
   &nbsp;
-  <img src="screenshots/about.png" alt="Aba About" width="47%">
+  <img src="screenshots/about.PNG" alt="Aba About" width="47%">
 </p>
 
 ---
