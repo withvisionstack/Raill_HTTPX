@@ -7,7 +7,7 @@ binário único, sem Electron, sem Node, sem webview.
 ## Instalação
 
 ```bash
-git clone <seu-repo>
+git clone https://github.com/withvisionstack/Raill_HTTPX.git
 cd rail_httpx
 cargo build --release
 
