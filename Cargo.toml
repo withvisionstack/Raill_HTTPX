@@ -6,7 +6,8 @@ resolver = "2"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-authors = ["Equipe RAIL_HTTPX"]
+description = "Postman leve + Burp core, em Rust. Cliente HTTP, proxy MITM, fuzzer, scanner e cliente de banco em um só binário."
+repository = "https://github.com/withvisionstack/rail_httpx"
 
 [workspace.dependencies]
 tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "io-util", "io-std", "time", "sync"] }
@@ -42,3 +43,6 @@ lto = true          # link-time optimization: -20% a -30% no tamanho
 codegen-units = 1   # melhor otimização, build um pouco mais lento
 strip = true        # remove símbolos de debug: -40% no tamanho
 panic = "abort"     # sem unwinding: menor, sem stack traces em panic
+
+
+

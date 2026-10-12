@@ -2,6 +2,10 @@
 name = "rail-httpx-core"
 version.workspace = true
 edition.workspace = true
+license.workspace = true
+description.workspace = true
+repository.workspace = true
+readme = "README.md"
 
 [dependencies]
 tokio = { workspace = true }
