@@ -21,11 +21,11 @@
 <p align="center">
   <img src="screenshots/Fuzzer.PNG" alt="Aba Pentest — cliente HTTP" width="47%">
   &nbsp;
-  <img src="screenshots/Rest API.PNG" alt="Aba Send" width="47%">
+  <img src="screenshots/send-ollama.png" alt="Aba Send" width="47%">
   &nbsp;
-  <img src="screenshots/SQL.PNG" alt="Aba DB" width="47%">
+  <img src="screenshots/db.png" alt="Aba DB" width="47%">
   &nbsp;
-  <img src="screenshots/about.PNG" alt="Aba about" width="47%">
+  <img src="screenshots/about.png" alt="Aba about" width="47%">
 </p>
 
 ---
