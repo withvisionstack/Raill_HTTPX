@@ -19,9 +19,13 @@
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="screenshots/send.PNG" alt="Aba Send — cliente HTTP" width="47%">
+  <img src="screenshots/Fuzzer.PNG" alt="Aba Pentest — cliente HTTP" width="47%">
   &nbsp;
-  <img src="screenshots/about.PNG" alt="Aba About" width="47%">
+  <img src="screenshots/Rest API.PNG" alt="Aba Send" width="47%">
+  &nbsp;
+  <img src="screenshots/SQL.PNG" alt="Aba DB" width="47%">
+  &nbsp;
+  <img src="screenshots/about.PNG" alt="Aba about" width="47%">
 </p>
 
 ---
