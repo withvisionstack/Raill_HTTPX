@@ -24,8 +24,6 @@
   <img src="docs/screenshots/send-ollama.png" alt="Aba Send" width="47%">
   &nbsp;
   <img src="docs/screenshots/db.png" alt="Aba DB" width="47%">
-  &nbsp;
-  <img src="docs/screenshots/about.png" alt="Aba about" width="47%">
 </p>
 
 ---
