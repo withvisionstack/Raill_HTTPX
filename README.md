@@ -19,13 +19,13 @@
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="screenshots/Fuzzer.PNG" alt="Aba Pentest — cliente HTTP" width="47%">
+  <img src="docs/screenshots/fuzzer.png" alt="Aba Pentest — cliente HTTP" width="47%">
   &nbsp;
-  <img src="screenshots/send-ollama.png" alt="Aba Send" width="47%">
+  <img src="docs/screenshots/send-ollama.png" alt="Aba Send" width="47%">
   &nbsp;
-  <img src="screenshots/db.png" alt="Aba DB" width="47%">
+  <img src="docs/screenshots/db.png" alt="Aba DB" width="47%">
   &nbsp;
-  <img src="screenshots/about.png" alt="Aba about" width="47%">
+  <img src="docs/screenshots/about.png" alt="Aba about" width="47%">
 </p>
 
 ---
