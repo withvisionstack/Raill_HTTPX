@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="RAIL_HTTPX — Postman leve + Burp core em Rust. Cliente HTTP, proxy MITM, fuzzer, scanner e cliente de banco em um único binário.">
+<title>RAIL_HTTPX — Postman leve + Burp core em Rust</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="screenshots/icon.png">
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <h1>RAIL_HTTPX</h1>
+    <p class="tagline">
+      Postman leve + Burp core, em Rust.<br>
+      <strong>Um binário. Zero Electron. Zero login. Zero telemetria.</strong>
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="https://github.com/withvisionstack/rail_httpx/releases/latest">
+        ⬇ Baixar para Windows
+      </a>
+      <a class="btn secondary" href="https://github.com/withvisionstack/rail_httpx">
+        Ver no GitHub
+      </a>
+      <a class="btn tertiary" href="https://crates.io/crates/rail-httpx-cli">
+        Instalar via cargo
+      </a>
+    </div>
+    <p class="crates-badges">
+      <a href="https://crates.io/crates/rail-httpx-core">rail-httpx-core</a>
+      ·
+      <a href="https://crates.io/crates/rail-httpx-cli">rail-httpx-cli</a>
+      ·
+      <a href="https://crates.io/crates/rail-httpx-gui">rail-httpx-gui</a>
+    </p>
+  </div>
+</header>
+
+<section class="why">
+  <h2>Por que existe</h2>
+  <p>
+    As ferramentas do dia a dia estão pesadas e fragmentadas. Postman tem 300+ MB
+    e exige login. Insomnia mudou de licença três vezes. Burp Community faz uma
+    coisa só. Nenhum deles tem banco de dados.
+  </p>
+  <p>
+    O <strong>RAIL_HTTPX</strong> resolve isso em um único executável de ~20 MB,
+    multiplataforma, em três idiomas (PT-BR, EN, ES), com tema claro e escuro —
+    e é <strong>open source de verdade</strong> (MIT).
+  </p>
+</section>
+
+<section class="features">
+  <h2>O que ele faz</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>📤 Send</h3>
+      <p>
+        Cliente HTTP completo. GET, POST, PUT, PATCH, DELETE. Headers em
+        texto livre. Body JSON. Interpolação <code>{{var}}</code>. Testado
+        contra APIs REST, GraphQL e LLMs locais (Ollama).
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🛡 Proxy MITM</h3>
+      <p>
+        Intercepta HTTPS com CA próprio gerado em runtime. Log em tempo real
+        de toda request e response — headers, body, status, tempos. Vê o que
+        o DevTools esconde.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎯 Fuzzer</h3>
+      <p>
+        Wordlist paralela com marcador <code>FUZZ</code> na URL. Tabela com
+        status, tamanho e tempo. Compatível com SecLists. Descobre endpoints,
+        arquivos sensíveis e rotas esquecidas.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🔍 Scanner</h3>
+      <p>
+        Injeção automática nos query params. Detecta <strong>SQL Injection</strong>,
+        <strong>XSS refletido</strong>, <strong>SSTI</strong>,
+        <strong>Path Traversal</strong> e <strong>Command Injection</strong>.
+        Severidade colorida e evidência extraída da resposta.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🪝 Webhook</h3>
+      <p>
+        Servidor HTTP local pra receber e inspecionar webhooks. Testa
+        integrações com Stripe, GitHub, Mercado Pago, Twilio — sem ngrok,
+        sem webhook.site, sem upload de dados.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🗄 DB</h3>
+      <p>
+        Cliente de banco integrado. <strong>PostgreSQL</strong>,
+        <strong>MySQL</strong> e <strong>SQLite</strong>. Editor SQL com
+        tabela de resultado dinâmica. Reporta linhas afetadas em mutações.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="screenshots">
+  <h2>Screenshots</h2>
+
+  <figure>
+    <img src="screenshots/send-ollama.png" alt="Aba Send com POST para um LLM local via Ollama">
+    <figcaption>
+      <strong>Send</strong> — POST para um LLM local (Ollama, qwen2.5:1.5b) via
+      JSON puro. HTTP 200 em 26s, resposta completa em JSON.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="screenshots/proxy.png" alt="Aba Proxy interceptando 46 requisições HTTPS em tempo real">
+    <figcaption>
+      <strong>Proxy MITM</strong> — 46 requests interceptadas em tempo real.
+      Detalhe aberto mostra a request completa (headers do Firefox, cookies,
+      user-agent) e a response (via Cloudflare, com <code>Transfer-Encoding: chunked</code>).
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="screenshots/fuzzer.png" alt="Aba Fuzzer rodando wordlist com 4752 resultados">
+    <figcaption>
+      <strong>Fuzzer</strong> — 4752 payloads rodados em paralelo. Tabela com
+      status, tamanho da resposta e tempo por requisição.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="screenshots/db.png" alt="Aba DB rodando SELECT em SQLite com 5 resultados">
+    <figcaption>
+      <strong>DB</strong> — SELECT em SQLite com tabela renderizada. Colunas
+      dinâmicas, ordenação por <code>idade DESC</code>, tipagem preservada.
+    </figcaption>
+  </figure>
+</section>
+
+<section class="install">
+  <h2>Instalação</h2>
+
+  <h3>Opção 1 — binário pronto</h3>
+  <p>
+    Vai em <a href="https://github.com/withvisionstack/rail_httpx/releases">Releases</a>
+    e baixa o <code>.exe</code> mais recente. É executável direto, sem instalador.
+  </p>
+  <p class="notice">
+    <strong>Windows SmartScreen</strong>: vai avisar que "o aplicativo não é
+    reconhecido". É normal para software open source sem certificado de code
+    signing pago. Clica em <strong>Mais informações → Executar mesmo assim</strong>.
+  </p>
+
+  <h3>Opção 2 — via cargo (CLI)</h3>
+  <pre><code>cargo install rail-httpx-cli</code></pre>
+  <p>Instala o CLI globalmente no seu sistema.</p>
+
+  <h3>Opção 3 — compilar do código</h3>
+  <pre><code>git clone https://github.com/withvisionstack/rail_httpx.git
+cd rail_httpx
+cargo build --release --workspace</code></pre>
+  <p>Binários em <code>target/release/</code>.</p>
+</section>
+
+<section class="cli">
+  <h2>Uso rápido (CLI)</h2>
+  <pre><code># Enviar um request
+rail-httpx send https://httpbin.org/get
+
+# POST com JSON inline
+rail-httpx send https://httpbin.org/post -X POST -d '{"a":1}'
+
+# POST com JSON de arquivo (evita briga com shell)
+rail-httpx send http://api.local/generate -X POST --data-file body.json
+
+# Scan de vulnerabilidades
+rail-httpx scan "http://alvo/item?id=1" -p id
+
+# Fuzzer com wordlist
+rail-httpx fuzz "http://alvo/FUZZ" -w words.txt -c 50
+
+# Banco de dados
+rail-httpx db --url sqlite:///./dados.db -q "SELECT * FROM users LIMIT 5"
+rail-httpx db --url postgres://user:pass@host/db -q "SELECT NOW()"
+
+# Proxy MITM
+rail-httpx ca export --out ca.pem
+rail-httpx proxy --port 8080</code></pre>
+</section>
+
+<section class="legal">
+  <h2>⚠️ Uso responsável</h2>
+  <p>
+    RAIL_HTTPX é uma ferramenta de desenvolvimento e segurança ofensiva
+    legítima. Use <strong>apenas</strong> em:
+  </p>
+  <ul>
+    <li>Sistemas que você possui</li>
+    <li>Sistemas onde você tem <strong>autorização escrita</strong> do dono</li>
+    <li>Programas de bug bounty que cobrem o alvo</li>
+  </ul>
+  <p>
+    Usar contra sistemas de terceiros sem autorização é <strong>crime</strong>
+    em praticamente todas as jurisdições — no Brasil, Lei 12.737/2012;
+    nos EUA, CFAA. O autor não se responsabiliza por uso indevido.
+  </p>
+</section>
+
+<footer>
+  <p>
+    <strong>RAIL_HTTPX</strong> · MIT License · Feito em
+    <a href="https://www.rust-lang.org/">Rust</a>
+  </p>
+  <p>
+    <a href="https://github.com/withvisionstack/rail_httpx">GitHub</a> ·
+    <a href="https://crates.io/crates/rail-httpx-cli">crates.io</a> ·
+    <a href="https://github.com/withvisionstack/rail_httpx/issues">Issues</a>
+  </p>
+</footer>
+
+</body>
+</html>
